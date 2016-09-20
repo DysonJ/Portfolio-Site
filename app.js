@@ -13,8 +13,10 @@ window.onload = function(){
         index++
       }else{
         clearInterval(typing);
+        document.getElementById('logo').style = 'transform:scale(1);color:#ef3c3c;'
+        
         setTimeout(function(){
-          document.getElementById('stack-type').innerHTML = '&#xe900;&#xe901;&#xe902;&#xe903;'
+          document.getElementById('stack-type').innerHTML = '&#xe900;&#xe901;&#xe902;&#xe903;';
         },1200)
       }
     },170)
