@@ -1,0 +1,58 @@
+@font-face
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('icons'), local('icons'), url(fonts/icomoon.woff) format('woff');
+
+
+
+.hero .type
+  font-family: icons;
+  font-size: 70px;
+  color:#ef3c3c;
+  line-height: 90px;
+
+.hero .type span {
+  opacity: 0;
+  animation-name:blink;
+	animation-iteration-count:infinite;
+	animation-duration:.7s;
+	transition-timing-function:step-end;
+}
+
+@keyframes blink {
+	0% {
+		opacity:0;
+	}
+	50%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+.hero .bracket, .hero .property, .hero .type
+  float: left;
+
+
+.hero .property
+  line-height: 126px;
+  font-size: 36px;
+  margin-left: 60px;
+  margin-right: 20px;
+  font-family:'Roboto';
+  color: #919090;
+
+.hero .bracket
+  font-size: 100px;
+  font-family:'Roboto';
+  color:#e3e3e3;
+
+.hero .bracket:last-child
+  margin-left: 40px;
+
+.hero .deck
+  float: left;
+  width: 300px;
+  padding-top: 10px;
