@@ -1,9 +1,10 @@
+
 angular.module('app', ['ngRoute'])
   .config(function($routeProvider){
     $routeProvider.when('/about',{
       templateUrl:'/about.html',
-      //controller:'',
-      //controllerAs:'',
+      controller:'about',
+      controllerAs:'a',
     }).when('/resume',{
       templateUrl:'/resume.html',
       //controller:'',

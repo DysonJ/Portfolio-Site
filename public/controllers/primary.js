@@ -3,5 +3,7 @@ angular.module('app')
 
 function primaryController(){
   var p = this;
-  p.test = 'here'
+  p.test = 'here';
+
+  
 }

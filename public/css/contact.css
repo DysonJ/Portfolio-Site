@@ -1,0 +1,38 @@
+h1 { width:100%;}
+h1 .label { display:inline-block; position:relative;}
+h1 .icon { position:absolute; font-weight:normal; padding-right:5px; top:-20px; right:-50px; font-family:'icons'; font-size:26px; color:#f23a3a;
+
+	animation-name:pulse;
+	animation-iteration-count:1;
+	animation-duration:.9s;
+	animation-fill-mode:forwards;
+
+}
+
+#contact { width:100%; margin:100px auto 0 auto; position:relative;}
+#contact * {font-family:'lato'; color:#14255f; font-size:20px;}
+#contact input { border:1px solid #e5e4e4; height:50px; border-radius:5px; padding-left:10px; line-height:50px; width:49%; box-sizing:border-box; vertical-align:top;}
+#contact input:nth-child(1){
+	float:left;
+	 margin-right:1%;
+}
+#contact input:nth-child(2){
+	float:right;
+}
+#contact textarea { width:100%; margin-top:10px; border:1px solid #e5e4e4; height:300px; box-sizing:border-box; padding-left:10px; padding-top:15px; resize:vertical; clear:both;}
+
+#send { width:80px; height:80px; background:#f23a3a; border-radius:40px; cursor:pointer; position:absolute; right:60px; bottom:-40px; z-index:10;transition:.4s ease;}
+#send div { padding-top:26px; width:100%; text-align:center; color:#ffffff; }
+#send:hover { transform:scale(1.2);}
+
+.email { margin-top:20px;}
+.email .icon { font-family:'icons'; font-size:20px; color:#f23a3a; display:inline-block; padding-top:4px; padding-right:10px;}
+.email .address { font-family:'lato'; font-size:20px; color:#bab9b9; display:inline-block; vertical-align:top;}
+
+.divider { width:100%; height:3px; background:#cdcdcd; margin:130px auto 0 auto; position:relative;}
+.divider .label { position:absolute; left:0; bottom:-8px; width:100%; color:#bab9b9; font-family:'lato'; font-size:20px; text-align:center;}
+.divider .label span { background:#f4f4f4; padding:15px;}
+
+.note { margin:50px auto 200px auto; width:100%; box-sizing:border-box; padding-right:100px; font-family:'lato'; font-size:18px; color:#bab9b9; position:relative;}
+.note b{ color:#f23a3a;}
+.note .icon { position:absolute; top:0; right:10px; font-family:'icons'; font-size:30px;}
