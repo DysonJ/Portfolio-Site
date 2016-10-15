@@ -1,29 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
+    <script src="/modules/app.js"></script>
+    <script src="/controllers/primary.js"></script>
+
     <link rel="stylesheet" href="/app.css" />
     <meta charset="utf-8">
     <title>Jon Dyson | Full Stack Developer</title>
   </head>
-  <body>
+  <body ng-controller="primary as p">
 
-    <nav>
+    <nav id="upper" class="noselect">
         <div class="nav-wrapper">
           <div class="container">
           <div class="brand-logo left">Jon Dyson</div>
-          <ul class="right">
-            <li class="waves-effect waves-light"><a href="/login.html">Login</a></li>
+
+          <ul>
+            <li>
+              <a href="#/about">
+          	  <div class="label">
+              	<div class="l">&lt;</div>
+                <span>about</span>
+                <div class="r">&gt;<span> _</span></div>
+              </div>
+              </a>
+            </li>
+            <li>
+              <a href="#/resume">
+          	  <div class="label">
+              	<div class="l">&lt;</div>
+                <span>resume</span>
+                <div class="r">&gt;<span> _</span></div>
+              </div>
+              </a>
+            </li>
+            <li>
+              <a href="#/portfolio">
+          	  <div class="label">
+              	<div class="l">&lt;</div>
+                <span>portfolio</span>
+                <div class="r">&gt;<span> _</span></div>
+              </div>
+              </a>
+            </li>
+            <li>
+              <a href="#/contact">
+          	  <div class="label">
+              	<div class="l">&lt;</div>
+                <span>contact</span>
+                <div class="r">&gt;<span> _</span></div>
+              </div>
+              </a>
+            </li>
           </ul>
+
           </div>
         </div>
       </nav>
 
-    <ng-view></ng-view>
+    <div class="canvas">
+      <ng-view></ng-view>
+    </div>
+
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

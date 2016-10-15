@@ -1,3 +1,93 @@
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
 nav{
   background-color: #fff;
+  color: #000;
+}
+
+nav .brand-logo{
+  color: #000;
+}
+
+nav a{
+  color: inherit;
+}
+
+a{
+  color: inherit;
+}
+
+nav ul a{
+  color: inherit;
+  font-size: inherit;
+  background-color: inherit;
+  padding: 0;
+}
+
+nav ul a:hover{
+  background: none;
+}
+
+#upper { width:100%; height:60px; background:#ffffff; position:fixed; z-index:99;}
+#upper ul { width:100%; height:100%; list-style:none; text-align:center; }
+#upper ul li {
+  float: none;
+  display:inline-block;
+  padding-left:20px;
+  padding-right:40px;
+  line-height:60px;
+  font-family:'lato';
+  font-size:24px;
+  cursor:pointer;
+  color: #000;
+}
+#upper .active { color:#f23a3a; cursor:default; position:relative;}
+#upper .label { position:relative;}
+#upper .l { position:absolute; left:-20px; top:0; color:#f23a3a; opacity:0; transition:ease .3s;}
+#upper .r { position:absolute; right:-33px; top:0; color:#f23a3a; opacity:0; transition:ease .3s;}
+#upper .active .l { opacity:1;}
+#upper .active .r { opacity:1; right:-20px;}
+#upper .label .r span {
+	animation-name:blink;
+	animation-iteration-count:infinite;
+	animation-duration:.7s;
+	transition-timing-function:step-end;
+	animation-play-state:paused;
+	}
+#upper .label:hover div { opacity:1;}
+#upper .label:hover span {animation-play-state: running;}
+@keyframes blink {
+	0% {
+		opacity:0;
+	}
+	50%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+@media only screen and (max-width: 1300px){
+  nav .brand-logo.left {
+    left:0.5rem
+  }
+}
+
+@media only screen and (max-width: 992px){
+  #upper li {
+    float: right;
+  }
+}
+
+.canvas{
+  padding-top: 60px;
 }
