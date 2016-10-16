@@ -35,6 +35,7 @@ nav .brand-logo{
   font-size: 30px;
   top: -5px;
   cursor: pointer;
+  padding-left: 10px;
 }
 
 nav a{
