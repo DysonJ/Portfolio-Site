@@ -10,16 +10,16 @@
 	<!-- <input id="name" placeholder="what is your name? "/><input id="email" placeholder="where can I email you back?" /> -->
 		<div class="row">
 			<div class="input-field col s6">
-				<input id="name" type="text" />
+				<input id="name" type="text" ng-model="c.message.name" />
 				<label for="name">what's your name?</label>
 			</div>
 			<div class="input-field col s6">
-				<input id="email" type="text" />
+				<input id="email" type="text" ng-model="c.message.email"/>
 				<label for="email">where can I email you back?</label>
 			</div>
 		</div>
-    <textarea id="message" placeholder="what's on your mind?"></textarea>
-    <div id="send"><div>&#xe163;</div></div>
+    <textarea id="message" placeholder="what's on your mind?" ng-model="c.message.text"></textarea>
+    <div id="send" ng-click="c.sendMail()"><div>&#xe163;</div></div>
 </form>
 
 <div class="email">

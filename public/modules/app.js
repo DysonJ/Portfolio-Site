@@ -7,15 +7,15 @@ angular.module('app', ['ngRoute'])
       controllerAs:'a',
     }).when('/resume',{
       templateUrl:'/resume.html',
-      //controller:'',
-      //controllerAs:'',
+      controller:'resume',
+      controllerAs:'r',
     }).when('/portfolio',{
       templateUrl:'/portfolio.html',
       //controller:'',
       //controllerAs:'',
     }).when('/contact',{
       templateUrl:'/contact.html',
-      //controller:'',
-      //controllerAs:'',
+      controller:'contact',
+      controllerAs:'c',
     })
   })
