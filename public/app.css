@@ -7,6 +7,11 @@ body{
   background: #fafafa;
 }
 
+::selection {
+    color: #fff; 
+    background: #ef3c3c;
+}
+
 @font-face {
   font-family: 'icons';
   font-style: normal;
