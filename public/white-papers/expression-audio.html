@@ -1,0 +1,72 @@
+
+
+<div class="container white-paper">
+
+<h1 class="left">Expression Audio</h1>
+
+<a href="demo.cfm" class="clearfix">
+<div class="demo-button">
+	<div class="label">
+    	<span>View Site</span>
+    	<div class="icon">&#xe30c;</div>
+        <div class="movement">&#xea42;</div>
+    </div>
+</div>
+</a>
+
+<div class="description">
+This is a description of the project. Ipso Lorm. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+
+<ul class="list">
+	<div class="label">Code</div>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>jQuery</li>
+    <li>ColdFusion</li>
+</ul>
+
+<h2>
+	<div class="line">
+    <div class="title">Spotlight</div>
+    </div>
+</h2>
+<div class="feature">
+		<img class="left" src="../../images/portfolio/ea-customizer.gif" />
+    	<div class="title">Product Customization w/ Drag & Drop</div>
+        <div class="text">My goal was to create a product preview image that allowed a vast number of color combinations without feeling overwhelming to the user. There are around 21,000 possible combination for the headphones I designed. Users love choice until it becomes confusing, so good design and implementation were extremely important. I also wanted to create a system that would be as intuitive on a smartphone or tablet as it is on a full desktop browser. This website showcases my first implementation. A later version highlights some usability improvements I intended to create for the mobile user experiance. <br /><br />The image itself is composed of several PNG images, one for each componant divided into layers. JavaScript is used to dynamically change the SRC of each image as a different color is selected, allowing visual changes.  User choices such as clicks and "favorite" colors are captured during the process for later user data analysis, and for user return visits. <br /><br /> A combination of ColdFusion and JavaScript is used to filter and sort the available color patterns asyncronously. This was achieved primarily serverside, but could stand to gain a performance boost by containing the process client side.<br /><br /> The design was completed using jQuery drag & drop functionality, in combination with 3 third-party plugins. Custom Scrollbar was used to create a smoother side-scroll experiance. Outside Events was used hide the sort options when the user "clicks off". A small but pleasant usability additon. Touch Punch was used to extend jQuery UI to include touch events.</div>
+        <div class="clear"></div>
+</div><!--/feature-->
+
+<div class="feature">
+		<img class="right" src="../../images/portfolio/ea-responsive.jpg" />
+    	<div class="title">Responsive Design</div>
+        <div class="text">A responsive design is key to any modern website. While internet sales are still primarily placed from larger format browsers, a large percentage of traffic is now mobile. Orignially when I began making websites I would design them for desktop browsers and work to make them scale properly on smaller screen. I've since reversed the strategy, and have begun designing for mobile devices first, and then scale upwards. It's often easier to begin with limited space and design for the essetials, ensuring a good user experiance.  </div>
+        <div class="clear"></div>
+</div><!--/feature-->
+
+
+<div class="feature">
+		<img class="left" src="../../images/portfolio/ea-facebook.jpg" />
+    	<div class="title">Integrated Facebook Sign-in</div>
+        <div class="text">The site is setup as a Facebook App, allowing easy login through either facebook or standard email and password. This addition allows users to save their favorite color combinations and return at a later date. It's ideal, because it ensure a streamlined signup process, and encourages users to play with the customization options. This could later be used to allow customer order management on a final ecommerce version of the site. </div>
+        <div class="clear"></div>
+</div><!--/feature-->
+
+<div class="feature">
+		<img class="right" src="../../images/portfolio/ea-share.png" />
+    	<div class="title">Dynamic Facebook Share Image</div>
+        <div class="text">I wanted users to have the ability to share an image of their exact color combination. This creates two primary problems. First, given the number of options there are around 21,000 possible combinations. And second, Facebook does not like dynamic images, and caches any webpage share image. This would normally prevent a page from serving a different share image for each user.<br /><br /> Using ColdFusion image functions, I address the first problem by laying several PNG images over one another on the fly, and compress them into a single optimized JPEG. Only those color combinations acutally requested are created. <br /><br /> I address the Facebook question by creating a url with a custom variable to be passed through facebook. When the facebook image server queres my website for the share image, the site will identify the proper image based on the url variable and serve only that one within the meta tags. This forces facebook to believe it is for a unique page, and so requires a unique share image. <br /><br /><span class="italic">Note: This is a bit of a work around, and could be blocked by facebook at some point. If it is not currently working, this is likely why.</span></div>
+        <div class="clear"></div>
+
+</div><!--/feature-->
+
+<div class="feature">
+		<img class="left" src="../../images/portfolio/ea-hero.gif" />
+    	<div class="title">Dynamic Hero Image</div>
+        <div class="text">The front page contains a number of images that highlight the product. What's interesting about the images is that none of the models are actually wearing the headphones. Using Photoshop i've digitally added the product to stock photos, and then sliced the image into several layers allowing me to change the color dynamically through javascript, and clever use of PNG transpancy. <br /><br /> Thoughout the front page the headphones will alternate between two styles, but the design and code is such that any number of color patterns could be added with very little effort. The concept was to use the most popular colors once enough user data was collected. </div>
+        <div class="clear"></div>
+</div><!--/feature-->
+
+</div>

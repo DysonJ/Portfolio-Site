@@ -1,0 +1,13 @@
+#upper {
+  display: none;
+}
+
+.canvas{
+  height: 100%;
+  padding-top: 0;
+  background: #565656;
+}
+
+.spacing{
+  display: none;
+}

@@ -9,13 +9,25 @@ angular.module('app', ['ngRoute','ngAnimate'])
       templateUrl:'/resume.html',
       controller:'resume',
       controllerAs:'r',
-    }).when('/portfolio',{
-      templateUrl:'/portfolio.html',
-      //controller:'',
-      //controllerAs:'',
     }).when('/contact',{
       templateUrl:'/contact.html',
       controller:'contact',
       controllerAs:'c',
+    }).when('/portfolio',{
+      templateUrl:'/portfolio.html',
+      //controller:'',
+      //controllerAs:'',
+    }).when('/white-paper/mobile-ui',{
+      templateUrl:'/white-papers/mobile-ui.html',
+      //controller:'',
+      //controllerAs:'',
+    }).when('/white-paper/expression-audio',{
+      templateUrl:'/white-papers/expression-audio.html',
+      //controller:'',
+      //controllerAs:'',
+    }).when('/demo/:project',{
+      templateUrl:'/demo.html',
+      controller:'demo',
+      controllerAs:'d',
     })
   })

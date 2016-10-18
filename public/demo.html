@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/demo.css" />
+
+<div id="control">
+	<div class="label">Demo</div>
+    <div
+      ng-class="{active:d.view=='mobile'}"
+      class="screen"
+      title="Mobile"
+      ng-click="d.changeView('mobile')"
+      >&#xe325;</div>
+    <div
+      ng-class="{active:d.view=='desktop'}"
+      class="nav"
+      title="Fullscreen"
+      ng-click="d.changeView('desktop')"
+      >&#xe30c;</div>
+      <div
+        class="nav"
+        title="Back"
+        ng-click="d.back()"
+        >&#xe15e;</div>
+</div>
+
+<div
+  id="view"
+  ng-class="{mobile:d.view=='mobile',desktop:d.view=='desktop'}"
+  >
+<img
+  ng-show="d.view=='mobile'"
+  class="upper mobile-ui"
+  src="../../images/portfolio/demo-mobile01.png" />
+<img
+  ng-show="d.view=='mobile'"
+  class="lower mobile-ui active"
+  src="../../images/portfolio/demo-mobile02.png" />
+
+<iframe ng-src="{{d.url}}" id="demo"></iframe>
+</div>
