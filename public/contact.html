@@ -19,7 +19,23 @@
 			</div>
 		</div>
     <textarea id="message" placeholder="what's on your mind?" ng-model="c.message.text"></textarea>
-    <div id="send" ng-click="c.sendMail()"><div>&#xe163;</div></div>
+    <div
+		id="send"
+		ng-click="c.sendMail()"
+		ng-class="{active:c.sending==true}"
+		>
+		<div
+		ng-class="{inactive:c.sending==false}"
+		class="icon">
+			<div
+				ng-if="c.sending==true"
+				class="jumping-dots">
+			  <span class="dot-1">&#xe3fa;</span>
+			  <span class="dot-2">&#xe3fa;</span>
+			  <span class="dot-3">&#xe3fa;</span>
+			</div>
+		</div>
+	</div>
 </form>
 
 <div class="email">

@@ -76,7 +76,12 @@ h1 .icon {
 
 #send { width:80px; height:80px; background:#f23a3a; border-radius:40px; cursor:pointer; position:absolute; right:60px; bottom:-40px; z-index:10;transition:.4s ease;}
 
-#send div {
+#send.active{
+	background:#bab9b9;
+}
+
+
+#send .icon {
 	padding-top:18px;
 	width:100%;
 	text-align:center;
@@ -84,6 +89,12 @@ h1 .icon {
 	font-size: 30px;
 	font-family: 'icons';
 }
+
+#send .icon.inactive:after{
+	content: '\e163';
+	font-family: 'icons';
+}
+
 #send:hover { transform:scale(1.2);}
 
 .email {
@@ -150,4 +161,45 @@ h1 .icon {
 	0%{ transform:scale(1);}
 	50%{ transform:scale(1.5);}
 	100%{ transform:scale(1);}
+}
+
+.jumping-dots{
+	position: relative;
+	top: -7px;
+	left: -3px;
+	color: #747474;
+}
+
+.jumping-dots span {
+	font-family: 'icons';
+	font-size: 10px;
+  position: relative;
+	letter-spacing: -5px;
+  bottom: 0px;
+  -webkit-animation: jump 1500ms infinite;
+  animation: jump 2s infinite;
+}
+.jumping-dots .dot-1{
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+.jumping-dots .dot-2{
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+}
+.jumping-dots .dot-3{
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+}
+
+@-webkit-keyframes jump {
+  0%   {bottom: 0px;}
+  20%  {bottom: 5px;}
+  40%  {bottom: 0px;}
+}
+
+@keyframes jump {
+  0%   {bottom: 0px;}
+  20%  {bottom: 5px;}
+  40%  {bottom: 0px;}
 }
