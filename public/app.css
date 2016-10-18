@@ -78,6 +78,10 @@ nav ul a:hover{
   background: none;
 }
 
+h1{
+  margin: 0;
+}
+
 #upper { width:100%; height:60px; background:#ffffff; position:fixed; z-index:99;}
 #upper ul { width:100%; height:100%; list-style:none; text-align:center; }
 #upper ul li {
@@ -131,9 +135,133 @@ nav ul a:hover{
 }
 
 .canvas{
-  padding-top: 60px;
+  position: relative;
 }
 
 /*Resume button animation*/
-.button .movement { opacity:0; position:absolute; right:65px; top:0; font-family:'icons'; font-size:14px; transition:.3s ease;  color:#fff;}
-.button:hover .movement { right:55px; opacity:1;}
+.pdf .movement { opacity:0; position:absolute; right:65px; top:0; font-family:'icons'; font-size:14px; transition:.3s ease;  color:#fff;}
+.pdf:hover .movement { right:55px; opacity:1;}
+
+.ngview{
+  height: 100%;
+  width: 100%;
+}
+.ngview.ng-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ngview.ng-enter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: fadeIn 300ms;
+  -moz-animation: fadeIn 300ms;
+  animation: fadeIn 300ms;
+}
+
+.about-canvas{
+  width: 100%;
+  box-sizing: border-box;
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.pdf { width:250px; height:60px; background:#cbcbcb; border-radius:6px; margin:0 auto; cursor:pointer;}
+
+.pdf .label { width:100%; height:100%; padding-left:15px; padding-right:50px; box-sizing:border-box; color:#ffffff; font-family:'lato'; font-size:22px; position:relative; line-height:60px;}
+
+.pdf .icon { position:absolute; right:20px; top:-200px; font-family:'icons'; font-size:24px; opacity:0; color:#f23a3a;
+
+	animation-name:drop;
+	animation-duration:2s;
+	animation-iteration-count:1;
+	animation-fill-mode:forwards;
+
+}
+
+.pdf .leaf { position:absolute; top:0; right:0;
+
+	animation-name:leaf;
+	animation-duration:2s;
+	animation-iteration-count:1;
+	animation-fill-mode:forwards;
+
+}
+
+@keyframes drop {
+	0%{ top:-200px; opacity:0;}
+	20%{ opacity:1; right:-15px;}
+	80% { color:#f23a3a;}
+	100%{ top:0; opacity:1; color:#ffffff; right:20px;}
+}
+
+@keyframes leaf {
+	/* Rotate a leaf by -50 degrees in 2D space at the start of the animation */
+    0%   { -webkit-transform: rotate(-50deg); }
+    /*  Rotate a leaf by 50 degrees in 2D space at the end of the animation */
+    30% { -webkit-transform: rotate(50deg); }
+	100% {  -webkit-transform: rotate(0deg);}
+}

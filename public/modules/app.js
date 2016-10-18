@@ -1,5 +1,5 @@
 
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ngRoute','ngAnimate'])
   .config(function($routeProvider){
     $routeProvider.when('/about',{
       templateUrl:'/about.html',

@@ -5,6 +5,7 @@ contactController.$inject = ['$http']
 
 function contactController($http){
   var c = this;
+  // $scope.pageClass = 'contact-canvas';
 
   c.message = {
     name:'',
