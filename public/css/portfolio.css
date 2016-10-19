@@ -10,19 +10,20 @@
 .feature-project .secondary-hero-wrap img { width: 100%; min-height: 195px;}
 .feature-project .secondary-hero { height:195px; width:100%; background:#ffffff; overflow:hidden;}
 .secondary-hero:nth-child(1) { margin-bottom:10px;}
-.feature-project .title { font-family:'lato'; font-size:34px; color:#f23a3a; padding-top:15px; display:inline-block;}
-.feature-project .badging {display:inline-block; padding-left:40px; height:53px; vertical-align:top; cursor:default; list-style:none;}
-.feature-project .badge { padding:5px; border:4px solid #c4c4c4; border-radius:4px; display:inline-block; color:#c4c4c4; margin-top:20px; font-family:'lato'; margin-right:2px;}
+.feature-project .title { font-family:'lato'; font-size:34px; color:#f23a3a; padding-top:15px; display:inline-block; padding-right: 40px;}
+.feature-project .badging {display:inline-block; height:53px; vertical-align:top; cursor:default; list-style:none;}
+.feature-project .badge { padding:5px; border:4px solid #c4c4c4; border-radius:4px; display:inline-block; color:#c4c4c4; font-family:'lato'; margin-right:2px; font-size: 20px;}
 .feature-project .description { font-family:'lato'; color:#7f7f7f; margin-top:15px; font-size:22px;}
 
 .project { width:100%; margin-bottom:150px;}
-.project .hero { width:55%; height:300px; display:inline-block; overflow:hidden; }
+.project .hero { width:55%;  float:right; }
+.project .hero .image-wrap {overflow:hidden; height:300px;}
 .project .hero img { width:100%;}
-.project .info-wrap { width:45%; height:300px; display:inline-block; vertical-align:top; padding-right:20px; box-sizing:border-box;}
+.project .info-wrap { width:45%; display:inline-block; vertical-align:top; padding-right:20px; box-sizing:border-box;}
 .project .title { font-family:'lato'; font-size:34px; color:#f23a3a;}
 .project .description { font-family:'lato'; color:#7f7f7f; margin-top:15px; font-size:22px;}
-.project .badging { list-style:none; cursor:default;}
-.project .badge { padding:5px; border:4px solid #c4c4c4; border-radius:4px; display:inline-block; color:#c4c4c4; margin-top:20px; font-family:'lato'; margin-right:2px;}
+.project .badging { width:100%;list-style:none; cursor:default; margin-bottom: 40px; text-align: right;}
+.project .badge { padding:5px; border:4px solid #c4c4c4; border-radius:4px; display:inline-block; color:#c4c4c4; margin-top:20px; font-family:'lato'; margin-right:2px; font-size: 20px;}
 
 .badge { transition:ease .4s;}
 .badge:hover { border:4px solid #f23a3a; color:#f23a3a;}

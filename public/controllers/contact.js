@@ -40,5 +40,7 @@ function contactController($http){
       c.message.text = '';
 
     })
+
+    
   }
 }
