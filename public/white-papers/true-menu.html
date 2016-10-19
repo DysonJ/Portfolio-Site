@@ -1,0 +1,98 @@
+<div class="container white-paper">
+
+<h1 class="left">TrueMenu</h1>
+
+
+
+<a href="http://true.menu">
+<div class="demo-button">
+	<div class="label">
+    	<span>Visit True.Menu</span>
+    	<div class="icon">&#xe30c;</div>
+        <div class="movement">&#xea42;</div>
+    </div>
+</div>
+</a>
+<a href="http://truemenudemo.net">
+<div class="demo-button">
+	<div class="label">
+    	<span>View Client</span>
+    	<div class="icon">&#xe30c;</div>
+        <div class="movement">&#xea42;</div>
+    </div>
+</div>
+</a>
+
+
+<div class="clearfix"></div>
+
+<div class="description">
+Every town has at least 1 or 2 small family owned pizza restaurants. The thing that these restaurants generally have in common is unfortunately, a terrible website, and a lack of ability to order online. I’m currently building TrueMenu as an exercise that solves part of this problem, and allows even the smallest restaurant to compete with corporate pizza.
+</div>
+
+<ul class="list">
+	<div class="label">Code</div>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Angular</li>
+		<li>Node.js</li>
+		<li>MongoDB</li>
+</ul>
+
+<h2>
+	<div class="line">
+    <div class="title">Spotlight</div>
+    </div>
+</h2>
+<div class="feature clearfix">
+		<div class="left snippet">
+			<span>&#60;script></span> <br />
+				window.$TrueMenu || (function(d,s){<br />
+				 window.$TrueMenu = {};<br />
+				 var $ = d.createElement(s), <br />
+				 s=d.currentScript; <br />
+				 $TrueMenu.s=s; <br />
+				 $.type="text/javascript"; <br />
+				 $.setAttribute("charset","utf-8");<br /> $.src="//true.menu/api?key=d667422b61c46317d534b9c2ef"; <br />
+				 $.async=!0; <br />
+				 s.parentNode.insertBefore($,s) })(document,"script"); <br />
+				 <span>&#60;/script></span>
+		</div>
+    	<div class="title">API</div>
+        <div class="text">TrueMenu is designed to function as a JavaScript widget that’s simply dropped within a DOM element. The script with then collect the required components through the site’s api, and dynamically build a menu system specific to the requesting site based on the api key. The requested scripts maintain a reference to the original script and remove it. Essentially the api constructs the widget and then cleans up after itself. (The script to the left is active and will work on any site)</div>
+</div><!--/feature-->
+
+<div class="feature clearfix">
+		<img class="right" src="../../images/portfolio/pizzamockup.jpg" />
+    	<div class="title">Widget</div>
+        <div class="text">The TrueMenu widget is designed to integrate seamlessly with the client’s website. With this in mind, I made the choice to avoid any dependencies and write only vanilla JavaScript. The inclusion of a framework like angular would conflict if the client were running their own angular app. This means that the majority of DOM elements are created dynamically by looping over JSON data and assigning corresponding tags and attributes. The JavaScript is minified and contained within a single window variable, $TrueMenu. </div>
+</div><!--/feature-->
+
+
+<div class="feature clearfix">
+		<img class="left border" src="../../images/portfolio/tm-edit.jpg" />
+    	<div class="title">Edit-in-Place</div>
+        <div class="text">All string data with the management system is designed to be editable anywhere it’s displayed to the user. This creates for a more intuitive user experience. Information is displayed within a standard &#60;div&#62; which, on click, is replaced by an imperceptible text input. The data is changed in real time with simple angular data binding.</div>
+</div><!--/feature-->
+
+<div class="feature clearfix">
+		<img class="right border" src="../../images/portfolio/tm-option.jpg" />
+    	<div class="title">Flexible Data Structure</div>
+        <div class="text">Menu items often require a number of options or choices. The system I’ve created so far allows a user to design option sets. For example, a restaurant may carry a menu item, wings. Wings will invariably require additional user choices, ie number, type, sauce. So rather than hard coding choices, the system allows the creation and attachment of option sets. Option sets represent a JavaScript object and can be used globally on many items, or locally on a single item.</div>
+
+</div><!--/feature-->
+
+<div class="feature clearfix">
+		<img class="left border" src="../../images/portfolio/tm-builder.jpg" />
+    	<div class="title">"Pizza Builder"</div>
+        <div class="text">The client widget allows the customization of pizza by end users. This customization is controlled and easily edited within the menu editor. It’s designed to allow the user to intuitively build their desired pizza, and pass that pizza as a JavaScript object to the shopping cart and ultimately the order system.</div>
+</div><!--/feature-->
+
+<div class="feature clearfix">
+		<img class="right border" src="../../images/portfolio/tm-orders.jpg" />
+    	<div class="title">Receive Realtime Orders via Sockets</div>
+        <div class="text">A given restaurant has access to an orders screen, linked via sockets. This allows the screen to update with incoming order without the need to refresh the page. Updates can then be pushed back to the customer showing the progress of the order. This lends itself nicely to touchscreen management in the kitchen.</div>
+</div><!--/feature-->
+
+</div>

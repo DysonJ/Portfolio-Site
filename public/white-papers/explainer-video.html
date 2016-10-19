@@ -1,0 +1,63 @@
+<div class="container white-paper">
+
+<script type="text/javascript">
+function play(){
+$('#play').css('display','none');
+$('#cover').css('display','none');
+document.getElementById('video').play()
+}
+
+</script>
+
+<h1 class="left">Exlainer Video</h1>
+
+<div class="clearfix"></div>
+
+
+
+<div class="description">
+This is a simple explainer video for a hobby project, Expression Audio. I used After Effects for a number of the scenes and premier pro to build the complete video with transitions. In the end it was a fun simple project. I would like to explore the parallax effect further, and include some z-axis traversal through the shot.
+</div>
+
+
+
+<div class="video">
+<div class="background">
+	<div id="play" class="arrow" onclick="play()">&#xe039;</div>
+    <div id="cover" onclick="play()"><img src="/videos/cover.jpg" /></div>
+    <video id="video" width="600" controls>
+        <source src="/videos/ea.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</div>
+</div>
+
+<ul class="list">
+	<div class="label">Created Using</div>
+    <li>Premiere Pro</li>
+    <li>After Effects</li>
+    <li>Photoshop</li>
+</ul>
+
+
+<h2>
+	<div class="line">
+    <div class="title">Spotlight</div>
+    </div>
+</h2>
+<div class="feature clearfix">
+		<img class="left" src="/images/portfolio/ev-parallax.jpg" />
+    	<div class="title">Parallax Animations</div>
+        <div class="text">The first two scenes are static images, separated into layers. Using After Effects I created a simple parallax effect, and added a rag-doll effect to the subject of each photo. In combination it creates a visually interesting slow motion effect.</div>
+</div><!--/feature-->
+
+<div class="feature clearfix">
+		<img class="right border" src="/images/portfolio/ev-transitions.jpg" />
+    	<div class="title">Transitions</div>
+        <div class="text">My goal for the transitions was to create a subtle effect, that also flowed nicely with both the background music and the voice-over.</div>
+</div><!--/feature-->
+
+
+
+
+</div>

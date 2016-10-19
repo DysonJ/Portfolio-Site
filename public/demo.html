@@ -26,11 +26,11 @@
   ng-class="{mobile:d.view=='mobile',desktop:d.view=='desktop'}"
   >
 <img
-  ng-show="d.view=='mobile'"
+  ng-if="d.view=='mobile'"
   class="upper mobile-ui"
   src="../../images/portfolio/demo-mobile01.png" />
 <img
-  ng-show="d.view=='mobile'"
+  ng-if="d.view=='mobile'"
   class="lower mobile-ui active"
   src="../../images/portfolio/demo-mobile02.png" />
 

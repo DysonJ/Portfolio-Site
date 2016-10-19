@@ -25,6 +25,22 @@ angular.module('app', ['ngRoute','ngAnimate'])
       templateUrl:'/white-papers/expression-audio.html',
       //controller:'',
       //controllerAs:'',
+    }).when('/white-paper/true-menu',{
+      templateUrl:'/white-papers/true-menu.html',
+      //controller:'',
+      //controllerAs:'',
+    }).when('/white-paper/explainer-video',{
+      templateUrl:'/white-papers/explainer-video.html',
+      //controller:'',
+      //controllerAs:'',
+    }).when('/white-paper/american-bakeware',{
+      templateUrl:'/white-papers/american-bakeware.html',
+      //controller:'',
+      //controllerAs:'',
+    }).when('/white-paper/culinary-web-solutions',{
+      templateUrl:'/white-papers/culinary-web-solutions.html',
+      //controller:'',
+      //controllerAs:'',
     }).when('/demo/:project',{
       templateUrl:'/demo.html',
       controller:'demo',

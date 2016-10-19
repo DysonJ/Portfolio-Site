@@ -8,3 +8,10 @@
   transform: translateY(-50%);
   color: #fff;
 }
+
+.coming-soon{
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 1000px;
+  font-size: 22px;
+}

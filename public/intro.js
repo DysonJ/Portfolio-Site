@@ -1,5 +1,5 @@
 window.onload = function(){
-  var text = ['&#xe900;','&#xe901;','&#xe902;','&#xe903;']
+  var text = ['&#xe901;','&#xe902;','&#xe903;','&#xe904;']
   var index = 0;
   setTimeout(function(){
     var typing = setInterval(function(){
@@ -16,7 +16,7 @@ window.onload = function(){
         document.getElementById('logo').style = 'transform:scale(1) translateX(-50%);color:#ef3c3c;'
 
         setTimeout(function(){
-          document.getElementById('stack-type').innerHTML = '&#xe900;&#xe901;&#xe902;&#xe903;';
+          document.getElementById('stack-type').innerHTML = '&#xe901;&#xe902;&#xe903;&#xe904;';
         },1200)
       }
     },170)
