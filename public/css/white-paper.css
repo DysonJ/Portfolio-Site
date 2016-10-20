@@ -1,6 +1,6 @@
 
 .white-paper{
-  padding-top: 150px;
+  padding-top: 40px;
   font-size: 22px;
 }
 
@@ -38,6 +38,25 @@
 .white-paper .grid:hover .tint {opacity:.5;}
 .white-paper .grid-item:hover { transform:scale(1.2); opacity:1 !important; z-index:9;}
 .white-paper .grid-item:hover .tint {opacity:0;}
+
+.white-paper .breadcrumb{
+  color: #999;
+  font-size: 18px;
+}
+
+.white-paper .breadcrumb:last-child{
+  cursor: default;
+}
+
+.white-paper .breadcrumbs{
+  margin-bottom: 80px;
+}
+
+.breadcrumb:before{
+  content:'\e315';
+  font-family: 'icons';
+  color: #999;
+}
 
 #overlay { position:fixed; top:60px; left:0; width:100%; height:100%; text-align:center; z-index:9;}
 #overlay .bg { position:fixed; left:0; top:0; width:100%; height:100%; background:#000000; opacity:.8;}

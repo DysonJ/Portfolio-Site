@@ -47,3 +47,11 @@ angular.module('app', ['ngRoute','ngAnimate'])
       controllerAs:'d',
     })
   })
+
+angular.module("app")
+  .run(function($rootScope, $location, $window){
+    $rootScope.$on('$routeChangeSuccess', function(event, currentRoute, previousRoute){
+      //Could use currentRoute to scroll to a specific id tag
+      window.scrollTo(0,0);
+    })
+  })
