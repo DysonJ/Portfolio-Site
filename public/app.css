@@ -159,9 +159,9 @@ h1{
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-animation: fadeIn 300ms;
-  -moz-animation: fadeIn 300ms;
-  animation: fadeIn 300ms;
+  -webkit-animation: fadeIn 500ms;
+  -moz-animation: fadeIn 500ms;
+  animation: fadeIn 500ms;
 }
 
 .about-canvas{
