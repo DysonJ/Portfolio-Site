@@ -17,6 +17,10 @@ angular.module('app', ['ngRoute','ngAnimate'])
       templateUrl:'/portfolio.html',
       //controller:'',
       //controllerAs:'',
+    }).when('/dev',{
+      templateUrl:'/dev.html',
+      //controller:'',
+      //controllerAs:'',
     }).when('/white-paper/mobile-ui',{
       templateUrl:'/white-papers/mobile-ui.html',
       //controller:'',
