@@ -19,8 +19,8 @@ angular.module('app', ['ngRoute','ngAnimate'])
       //controllerAs:'',
     }).when('/dev',{
       templateUrl:'/dev.html',
-      //controller:'',
-      //controllerAs:'',
+      controller:'dev',
+      controllerAs:'d',
     }).when('/white-paper/mobile-ui',{
       templateUrl:'/white-papers/mobile-ui.html',
       //controller:'',

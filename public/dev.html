@@ -9,82 +9,28 @@ which items appear in which day cards and percent of day */
 
 <section class="container dev">
   <div class="dev-group">
-    <div class="title">Feb. 27th - Mar. 3rd</div>
+    <div class="title">{{d.week.startDate|date:'MMM d'}} - {{d.week.endDate|date:'MMM d'}}</div>
 
-    <div class="day tile">
-      <div class="label">monday</div>
+    <div class="day tile" ng-repeat="day in d.days" ng-init="dayIndex = $index">
+      <div class="label">{{day}}</div>
       <div class="track">
-        <div class="color blue"></div>
-        <div class="color green"></div>
-        <div class="color yellow"></div>
+        <div class="color"
+          ng-repeat="task in d.week.tasks"
+          ng-if="task.duration[dayIndex] != 0"
+          ng-style="{
+            height:task.dailyPercentage[dayIndex] + '%',
+            background:task.color,
+          }"></div>
       </div>
       <ul>
         <li>
           <div class="swatch"></div>
-          <div class="task">API</div>
+          <div class="task" ng-repeat="task in d.week.tasks" ng-if="task.duration[dayIndex] != 0">{{task.title}}</div>
         </li>
       </ul>
     </div>
 
-    <div class="day tile">
-      <div class="label">tueday</div>
-      <div class="track">
-        <div class="color blue"></div>
-        <div class="color green"></div>
-        <div class="color yellow"></div>
-      </div>
-      <ul>
-        <li>
-          <div class="swatch"></div>
-          <div class="task">API</div>
-        </li>
-      </ul>
-    </div>
 
-    <div class="day tile">
-      <div class="label">wednesday</div>
-      <div class="track">
-        <div class="color blue"></div>
-        <div class="color green"></div>
-        <div class="color yellow"></div>
-      </div>
-      <ul>
-        <li>
-          <div class="swatch"></div>
-          <div class="task">API</div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="day tile">
-      <div class="label">friday</div>
-      <div class="track">
-        <div class="color blue"></div>
-        <div class="color green"></div>
-        <div class="color yellow"></div>
-      </div>
-      <ul>
-        <li>
-          <div class="swatch"></div>
-          <div class="task">API</div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="day tile">
-      <div class="label">monday</div>
-      <div class="track">
-        <div class="color blue"></div>
-        <div class="color green"></div>
-        <div class="color yellow"></div>
-      </div>
-      <ul>
-        <li>
-          <div class="swatch"></div>
-          <div class="task">API</div>
-        </li>
-      </ul>
-    </div>
 
 
     <div class="clear"></div>
@@ -95,13 +41,47 @@ which items appear in which day cards and percent of day */
 
       <div class="week tile">
         <div class="track">
-          <div class="color blue"></div>
-          <div class="color green"></div>
-          <div class="color yellow"></div>
+
+          <div class="color"
+            ng-repeat="task in d.week.tasks"
+            ng-style="{
+              background:task.color,
+              width:task.weeklyPercentage + '%'
+            }"
+            ></div>
+
         </div>
       </div>
 
-      <li class="task">
+      <li class="task" ng-repeat="task in d.week.tasks">
+        <div class="label">
+          <span ng-show="!editTitle" ng-click="editTitle = !editTitle">{{task.title}}</span>
+          <input ng-show="editTitle" ng-model="task.title" ng-blur="editTitle = !editTitle"/>
+          <div class="dayInputs">
+            <input ng-model="task.duration[0]" ng-blur="d.init()" type="number" />
+            <input ng-model="task.duration[1]" ng-blur="d.init()" type="number" />
+            <input ng-model="task.duration[2]" ng-blur="d.init()" type="number" />
+            <input ng-model="task.duration[3]" ng-blur="d.init()" type="number" />
+            <input ng-model="task.duration[4]" ng-blur="d.init()" type="number" />
+          </div>
+          <div class="button remove">-</div>
+          <div class="tag"
+          ng-style="{
+            background:task.color,
+          }"
+          ></div>
+          <ul class="notes">
+            <li ng-repeat="comment in task.comments track by $index">
+              <div class="tinyBtn" ng-click="d.removeComment(task, $index)">-</div>
+              <span ng-show="!editComment" ng-click="editComment = !editComment">{{comment}}</span>
+              <input ng-model="comment" ng-show="editComment"  ng-blur="editComment = !editComment"/>
+            </li>
+          </ul>
+          <div class="button addNote" ng-click="d.addComment(task)">+</div>
+        </div>
+      </li>
+
+      <!-- <li class="task">
         <div class="label">
           <span>API Task One</span>
           <div class="button remove">-</div>
@@ -129,10 +109,10 @@ which items appear in which day cards and percent of day */
           <span>API Task Three</span>
           <div class="tag yellow"></div>
         </div>
-      </li>
+      </li> -->
     </ul>
 
-    <div class="button add">+</div>
+    <div class="button add" ng-click="d.addTask()">+</div>
 
   </div>
 </section>
