@@ -8,14 +8,14 @@ which items appear in which day cards and percent of day */
 <link href="../css/dev.css" rel="stylesheet" />
 
 <section class="container dev">
-  <div class="dev-group">
-    <div class="title">{{d.week.startDate|date:'MMM d'}} - {{d.week.endDate|date:'MMM d'}}</div>
+  <div class="dev-group" ng-repeat="week in d.calendar.weeks" ng-init="weekIndex =  $index">
+    <div class="title" ng-click="d.save()">{{week.startDate|date:'MMM d'}} - {{week.endDate|date:'MMM d'}} {{$index}}</div>
 
     <div class="day tile" ng-repeat="day in d.days" ng-init="dayIndex = $index">
-      <div class="label">{{day}}</div>
+      <div class="label">{{day}}{{$index}}</div>
       <div class="track">
         <div class="color"
-          ng-repeat="task in d.week.tasks"
+          ng-repeat="task in week.tasks"
           ng-if="task.duration[dayIndex] != 0"
           ng-style="{
             height:task.dailyPercentage[dayIndex] + '%',
@@ -25,7 +25,7 @@ which items appear in which day cards and percent of day */
       <ul>
         <li>
           <div class="swatch"></div>
-          <div class="task" ng-repeat="task in d.week.tasks" ng-if="task.duration[dayIndex] != 0">{{task.title}}</div>
+          <div class="task" ng-repeat="task in week.tasks" ng-if="task.duration[dayIndex] != 0">{{task.title}}</div>
         </li>
       </ul>
     </div>
@@ -43,7 +43,7 @@ which items appear in which day cards and percent of day */
         <div class="track">
 
           <div class="color"
-            ng-repeat="task in d.week.tasks"
+            ng-repeat="task in week.tasks"
             ng-style="{
               background:task.color,
               width:task.weeklyPercentage + '%'
@@ -53,7 +53,7 @@ which items appear in which day cards and percent of day */
         </div>
       </div>
 
-      <li class="task" ng-repeat="task in d.week.tasks">
+      <li class="task" ng-repeat="task in week.tasks">
         <div class="label">
           <span ng-show="!editTitle" ng-click="editTitle = !editTitle">{{task.title}}</span>
           <input ng-show="editTitle" ng-model="task.title" ng-blur="editTitle = !editTitle"/>
@@ -64,7 +64,7 @@ which items appear in which day cards and percent of day */
             <input ng-model="task.duration[3]" ng-blur="d.init()" type="number" />
             <input ng-model="task.duration[4]" ng-blur="d.init()" type="number" />
           </div>
-          <div class="button remove">-</div>
+          <div class="button remove" ng-click="d.removeTask($index, week)">-</div>
           <div class="tag"
           ng-style="{
             background:task.color,
@@ -112,7 +112,7 @@ which items appear in which day cards and percent of day */
       </li> -->
     </ul>
 
-    <div class="button add" ng-click="d.addTask()">+</div>
+    <div class="button add" ng-click="d.addTask(week)">+</div>
 
   </div>
 </section>

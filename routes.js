@@ -1,14 +1,20 @@
 
-
+var Calendar = require('./models/calendar')
 
 
 module.exports = (app)=> {
+
+  app.post('/saveCalendar', (req, res) =>{
+    Calendar.findOneAndUpdate({},{
+      weeks:req.body.weeks
+    }, (doc, reply)=>{
+      res.sendStatus(200)
+    })
+  })
+
+
   app.post('/mail/send', (req, res)=>{
     console.log('email send')
-
-
-
-
 
     app.mailer.send('email',{
       to:'hello@jondyson.com',
