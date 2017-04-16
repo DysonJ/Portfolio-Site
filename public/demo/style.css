@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #e0e0e0;
+}
+#canvas {
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  margin: 30px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+.user {
+  width: 100%;
+}
+.clear {
+  clear: both;
+}
+.user img {
+  float: left;
+  width: 200px;
+  margin-right: 20px;
+}
+.user .info {
+  float: left;
+  font-size: 26px;
+  cursor: text;
+  width: 280px;
+  font-family: sans-serif;
+}
+.user .info input {
+  font-size: 26px;
+  border: none;
+  width: 100%;
+  font-family: sans-serif;
+  color: #555;
+}
+.hidden {
+  display: none;
+}

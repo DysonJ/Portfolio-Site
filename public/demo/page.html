@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body ng-app="app" ng-controller="user as user">
+        <div id="canvas">
+            <div class='user'>
+                <img src="user.jpg">
+                <div class="info">
+                    <div ng-click="user.toggleEdit($event)">{{user.data.username}}</div>
+                    <input ng-model="user.data.username" ng-blur="user.toggleEdit($event)" ng-enter-pressed="user.toggleEdit($event)" class="hidden" type="text"/>
+                </div>
+                <div class="info">
+                    <div ng-click="user.toggleEdit($event)">{{user.data.birthday| date:"dd mm yy"}}</div>
+                    <input ng-model="user.data.birthday" ng-blur="user.toggleEdit($event)" ng-enter-pressed="user.toggleEdit($event)" class="hidden" type="text"/>
+                </div>
+                
+            <div class="clear"></div>
+            </div>
+        </div>
+    </body>
+</html>
