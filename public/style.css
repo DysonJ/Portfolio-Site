@@ -23,6 +23,7 @@ a {
   src: local('icons'), local('icons'), url("fonts/icomoon.woff") format('woff');
 }
 .hero {
+  position: relative;
   width: 100%;
   height: 600px;
   max-height: 90%;
@@ -33,10 +34,10 @@ a {
   background: radial-gradient(ellipse at center, #fff 0%, #ebebeb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .hero .hero-group {
-  position: relative;
+  position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  display: inline-block;
+  transform-origin: top center;
+  transform: translateX(25%);
 }
 .hero .name {
   float: left;

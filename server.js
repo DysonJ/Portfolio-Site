@@ -5,14 +5,17 @@ var express = require('express'),
     config = require('./config.js'),
     mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/jondyson',function(error){
-  if (error){
-    console.error('Could Not Start mongoose: ', error)
-    process.exit(1);
-  }else{
-    console.log('Mongoose Started!')
-  }
-})
+if(!config.local){
+  mongoose.connect('mongodb://localhost/jondyson',function(error){
+    if (error){
+      console.error('Could Not Start mongoose: ', error)
+      process.exit(1);
+    }else{
+      console.log('Mongoose Started!')
+    }
+  })
+}
+
 
 
 var app = express();
