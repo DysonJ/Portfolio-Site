@@ -13,7 +13,6 @@
 
 #summary h2{
   margin-bottom: 40px;
-  font-size: 80px;
 }
 
 
@@ -67,6 +66,7 @@ section .title{
   font-weight: bold;
 }
 #education .logo { position:absolute; right:140px; top:50%; text-align:center; width:200px;}
+#education .logo img {max-width: 100%;}
 #education .school-group:nth-child(1) .logo { height:44px; margin-top:-22px; }
 #education .school-group:nth-child(2) .logo { height:56px; margin-top:-28px; }
 #education .school-group:nth-child(3) .logo { height:95px; margin-top:-47px; }
@@ -79,11 +79,13 @@ section .title{
 
 #experience .job { margin-bottom:60px; position:relative;}
 #experience .job-title { width:100%; padding-right:160px; box-sizing:border-box; padding-bottom:15px;}
-#experience .logo { position:absolute; right:140px; top:50%; text-align:center; width:200px;}
-#experience .job:nth-child(1) .logo { height:77px; margin-top:-38px; right:150px;}
-#experience .job:nth-child(2) .logo { height:104px; margin-top:-52px; }
-#experience .job:nth-child(3) .logo { height:105px; margin-top:-52px; }
-#experience .job:nth-child(4) .logo { height:70px; margin-top:-35px; }
+#experience .logo { position:absolute; right:140px; top:50%; transform: translateY(-50%);text-align:center; width:200px;}
+#experience .logo img {max-width: 100%;}
+#experience .job:nth-child(1) .logo {width: 200px; margin-top: 10px;}
+#experience .job:nth-child(1) .logo img {max-width: 75px;}
+#experience .job:nth-child(2) .logo img {max-width: 130px; margin-top: 20px;}
+#experience .job:nth-child(3) .logo img {max-width: 130px; margin-top: 20px;}
+#experience .job:nth-child(4) .logo img {max-width: 130px; margin-top: 20px;}
 #experience .year { position:absolute; right:0; top:50%; height:18px; margin-top:-9px; color: #6d6e70;}
 #experience ul { padding-left:26px; list-style:square; width:100%; padding-right:340px; box-sizing:border-box; color: #6d6e70;}
 
