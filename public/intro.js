@@ -13,7 +13,7 @@ window.onload = function(){
         index++
       }else{
         clearInterval(typing);
-        document.getElementById('logo').style = 'transform:scale(1) translateX(-50%);color:#ef3c3c;'
+        document.getElementById('logo').style = 'transform:scale(1) translateX(-50%);color:#ef3c3c; opacity:1;'
 
         setTimeout(function(){
           document.getElementById('stack-type').innerHTML = '&#xe901;&#xe902;&#xe903;&#xe904;';
